@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface TestComponentProps {
+export interface WelcomeProps {
   heading: string;
   content: ReactNode;
 }

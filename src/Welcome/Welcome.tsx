@@ -1,10 +1,10 @@
 import React from "react";
 
-import { TestComponentProps } from "./TestComponent.types";
 
-import "./TestComponent.css";
+import "./Welcome.css";
+import { WelcomeProps } from "./Welcome.types";
 
-const TestComponent: React.FC<TestComponentProps> = ({ heading, content }) => (
+const Welcome: React.FC<WelcomeProps> = ({ heading, content }) => (
   <div data-testid="test-component" className="test-component">
     <h1 data-testid="test-component__heading" className="heading">
       {heading}
@@ -13,4 +13,4 @@ const TestComponent: React.FC<TestComponentProps> = ({ heading, content }) => (
   </div>
 );
 
-export default TestComponent;
+export default Welcome;

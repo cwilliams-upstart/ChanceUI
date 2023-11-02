@@ -1,20 +1,20 @@
 import React from "react";
-import TestComponent from "./TestComponent";
+import Welcome from "./Welcome";
 
 export default {
-  title: "TestComponent"
+  title: "Welcome"
 };
 
 export const WithText = () => (
-  <TestComponent
-    heading="I am a test component"
-    content={<h2>Made with love by Harvey</h2>}
+  <Welcome
+    heading="Welcome to Chance UI"
+    content={<h2>Some Text</h2>}
   />
 );
 
 export const WithButtons = () => (
-  <TestComponent
-    heading="I have a button"
+  <Welcome
+    heading="Welcome to Chance UI"
     content={
       <div>
         <button onClick={() => alert("You clicked me!")}>Click me</button>

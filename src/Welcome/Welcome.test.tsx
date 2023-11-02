@@ -1,13 +1,13 @@
 import React from "react";
 import { render, within } from "@testing-library/react";
 
-import TestComponent from "./TestComponent";
-import { TestComponentProps } from "./TestComponent.types";
+import Welcome from "./Welcome";
+import { WelcomeProps } from "./Welcome.types";
 
 describe("TestComponent", () => {
-  const renderComponent = ({ heading, content }: Partial<TestComponentProps>) =>
+  const renderComponent = ({ heading, content }: Partial<WelcomeProps>) =>
     render(
-      <TestComponent
+      <Welcome
         heading={heading || "Default heading text"}
         content={content || <div>Default content</div>}
       />
