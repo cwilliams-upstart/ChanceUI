@@ -39,7 +39,7 @@ var css_248z = ".test-component {\n  background-color: var(--background);\n  col
 styleInject(css_248z);
 
 var Welcome = function (_a) {
-    _a.heading; var content = _a.content;
+    var content = _a.content;
     return (React__default["default"].createElement("div", { "data-testid": "test-component", className: "test-component" },
         React__default["default"].createElement("h1", { "data-testid": "test-component__heading", className: "heading" },
             React__default["default"].createElement("div", { style: { color: "green" } }, "Welcome to Chance UI! Enjoy")),
