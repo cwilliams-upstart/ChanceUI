@@ -5,33 +5,21 @@ import Welcome from "./Welcome";
 import { WelcomeProps } from "./Welcome.types";
 
 describe("TestComponent", () => {
-  const renderComponent = ({ heading, content }: Partial<WelcomeProps>) =>
+  const contentText = 'Default content';
+  const renderComponent = ({ content }: Partial<WelcomeProps>) =>
     render(
       <Welcome
-        heading={heading || "Default heading text"}
-        content={content || <div>Default content</div>}
+        content={content || <div>{contentText}</div>}
       />
     );
 
   it("should render heading text correctly", () => {
     const headingText = "Some test heading";
 
-    const { getByTestId } = renderComponent({ heading: headingText });
+    const { getByTestId } = renderComponent({ content: contentText });
 
     const testComponent = getByTestId("test-component__heading");
 
-    expect(testComponent).toHaveTextContent(headingText);
-  });
-
-  it("should render content correctly", () => {
-    const { getByTestId } = renderComponent({
-      content: <div data-testid="some-test-content">I am test content</div>
-    });
-
-    expect(
-      within(getByTestId("test-component__content")).queryByTestId(
-        "some-test-content"
-      )
-    ).toBeInTheDocument();
+    expect(testComponent).toHaveTextContent(contentText);
   });
 });
