@@ -1,5 +1,5 @@
 {
-  "name": "chanceui-component-library",
+  "name": "ChanceUI",
   "version": "1.0.0",
   "main": "build/index.js",
   "module": "build/index.esm.js",
